@@ -1,0 +1,64 @@
+<h1 style="text-align:center;">You Wake Up</h1>
+________________________________________________________________________________________________________________________________________________
+<!-- this script got from www.htmlbestcodes.com-Coded by: Krishna Eydat -->
+<html>
+<head></head>
+<body>
+<script>
+var ie=document.all?1:0
+var ns6=document.getElementById&&!document.all?1:0
+var ns4=document.layers?1:0
+var posleft=1
+var idoftrembleobject="trembletext"
+var trembleobject
+
+function starttremble() {
+    if (ie || ns4 || ns6) {
+        if (ie) {
+            trembleobject=eval("document.all."+idoftrembleobject+".style")
+        }
+        if (ns6) {
+            trembleobject=idoftrembleobject
+        }
+        
+	    dotremble()
+    }
+}
+function dotremble() {
+    posleft*=-1
+    if (ie) {
+	    trembleobject.posLeft+=posleft  
+    }
+    if (ns6) {
+	    var newpos=parseInt(document.getElementById(trembleobject).style.left)+posleft
+        document.getElementById(trembleobject).style.left=newpos
+    }
+    var timer=setTimeout("dotremble()",20)
+}
+onload=starttremble
+</script>
+<div id="tremblebox" style="position:relative">
+<span id="trembletext" style="position:absolute;left:10px;top:30px;">
+<font size=2 color=black face=Verdana>A Dark Forest Engulfed In Mist Surrounds You</font>...
+</span></div>
+<br/><br/>
+<br/>
+<p><a target="_blank" href=""><span style="font-size: 8pt; text-decoration: none"></span></a></p>
+</body>
+</html>
+<img 
+src="https://i.pinimg.com/originals/5c/7f/52/5c7f522777674b0cd043bd90e8381215.jpg" 
+    height="300px" 
+    width="300px" 
+    style="margin-left:100px"
+/>
+<h2>Which Way Do You Wish To Go, Player? </h2>
+<a href="file:///Users/missionbit/Desktop/Forward.html"> Forward</a>
+/
+<a href="file:///Users/missionbit/Desktop/To%20Your%20Right.html"> To Your Right </a>
+/
+<a href="file:///Users/missionbit/Desktop/To%20Your%20Left.html"> To Your Left </a>
+/
+<a href="file:///Users/missionbit/Desktop/Backwards.html"> Backwards</a>
+/
+<a href="file:///Users/missionbit/Desktop/Dig%20Through%20Your%20Backpack.html"> Dig Through Your Backpack</a>
